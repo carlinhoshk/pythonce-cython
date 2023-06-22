@@ -4,6 +4,15 @@ from setuptools import setup, Extension
 from Cython.Build import cythonize
 
 
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: Microsoft :: Windows :: Windows 10',
+    'Programming Language :: Python :: 3',
+]
+
+
 directory_path = os.path.dirname(
     os.path.abspath(__file__)
     )
@@ -18,6 +27,7 @@ ext_data = {
         'sources': [
             join(directory_path, 'pythonce', 'calculator', 'cal.pyx')]}
 }
+
 
 extensions = []
 
@@ -38,7 +48,18 @@ for name, data in ext_data.items():
 # Use cythonize on the extension object.
 setup(
     name='pythonce',
-    author='Carlinhoshk',
+    version='0.0.7',
+    description='Python Library writen in C ',
+    long_description=open('README.txt').read() + '\n\n' + open('CHANGELOG.txt').read(),
+    url='',
+    author='carlinhoshk',
+    author_email='carlosmdohk@gmail.com',
+    license='MIT',
+    classifiers=classifiers,
+    keywords='c',
+    install_requires=[
+        ''
+    ],
     #package_dir={'pythonce': ''},
     ext_modules=cythonize(extensions)
     )

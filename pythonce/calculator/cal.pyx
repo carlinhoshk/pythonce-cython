@@ -1,4 +1,5 @@
-def soma(double a, double b):
+def soma(int a, int b):
+
     return a + b
 
 def subtracao(double a, double b):
