@@ -8,15 +8,16 @@ directory_path = os.path.dirname(
     os.path.abspath(__file__)
     )
 
-
 ext_data = {
     'pythonce.ola.wrap_ola': {
         'sources': [
             join(directory_path, 'pythonce', 'ola', 'wrap_ola.pyx'),
             join(directory_path, 'pythonce', 'ola', 'ola.c')]
-    }
+    },
+    'pythonce.calculator.cal': {
+        'sources': [
+            join(directory_path, 'pythonce', 'calculator', 'cal.pyx')]}
 }
-
 
 extensions = []
 
